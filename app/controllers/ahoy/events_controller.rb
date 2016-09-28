@@ -24,9 +24,10 @@ module Ahoy
 
         options = {
           id: event["id"],
-          time: time
+          time: time,
+          user_id: event["user_id"]
         }
-        ahoy.track event["name"], event["user_id"], event["properties"], options
+        ahoy.track event["name"], event["properties"], options
       end
       render json: {}
     end
