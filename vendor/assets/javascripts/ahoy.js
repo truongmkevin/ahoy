@@ -291,11 +291,12 @@
     return true;
   };
 
-  ahoy.track = function (name, properties) {
+  ahoy.track = function (name, user_id, properties) {
     // generate unique id
     var event = {
       id: generateId(),
       name: name,
+      user_id: user_id,
       properties: properties || {},
       time: (new Date()).getTime() / 1000.0
     };
