@@ -26,7 +26,7 @@ module Ahoy
           id: event["id"],
           time: time
         }
-        ahoy.track event["name"], event["properties"], options
+        ahoy.track event["name"], event["user_id"], event["properties"], options
       end
       render json: {}
     end
